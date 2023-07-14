@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="age">&lt;b>&lt;big>Age&lt;/big>&lt;/b> %1$s</string>
+        <string name="address">&lt;b>&lt;big>Address&lt;/big>&lt;/b> %1$s</string>
+        <string name="city">&lt;b>&lt;big>City&lt;/big>&lt;/b> %1$s</string>
+        <string name="zip">&lt;b>&lt;big>ZIP&lt;/big>&lt;/b> %1$s</string>
+</resources>
