@@ -8,62 +8,80 @@
     android:padding="30dp"
     android:textColor="@color/white">
 
-    <TextView
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_zip"
+        android:backgroundTint="@color/colorAccent"/>
+
+    <EditText
         android:id="@+id/details_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
+        android:inputType="text"
         android:padding="0dp"
-        android:textSize="24sp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/details_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_name" />
+        app:layout_constraintTop_toBottomOf="@+id/details_name"
+        android:inputType="number"/>
 
-    <TextView
+    <EditText
         android:id="@+id/details_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_age" />
+        app:layout_constraintTop_toBottomOf="@+id/details_age"
+        android:inputType="text"/>
 
-    <TextView
+    <EditText
         android:id="@+id/details_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_address" />
+        app:layout_constraintTop_toBottomOf="@+id/details_address"
+        android:inputType="text"/>
 
-    <TextView
+    <EditText
         android:id="@+id/details_zip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_city" />
+        app:layout_constraintTop_toBottomOf="@+id/details_city"
+        android:inputType="number"/>
 
     <Button
-        android:id="@+id/button_edit"
+        android:id="@+id/button_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="@string/edit"
+        android:layout_marginTop="8dp"
+        android:text="@string/cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_zip"
+        app:layout_constraintTop_toBottomOf="@+id/button_save"
         android:backgroundTint="@color/colorAccent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

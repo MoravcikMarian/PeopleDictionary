@@ -44,7 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(database);
     }
 
-    public void addPerson(PersonalDetails details) {
+    public boolean addPerson(PersonalDetails details) {
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -55,13 +55,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_CITY, details.city);
         cv.put(COLUMN_ZIP, details.zip);
 
-        database.insert(TABLE_NAME,null, cv);
+        return database.insert(TABLE_NAME,null, cv) >= 0;
     }
 
     public Cursor findInDatabase(String[] columns, String selection, String[] selectionArgs) {
         SQLiteDatabase database = this.getReadableDatabase();
 
         return database.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null, null);
+    }
+
+    public boolean deletePerson(String id) {
+        return this.getWritableDatabase().delete(TABLE_NAME, "_id=?", new String[]{id}) > 0;
+    }
+
+    public void deleteAllPeople() {
+        this.getWritableDatabase().execSQL("DELETE FROM " + TABLE_NAME);
+    }
+
+    public boolean editPerson(String id, PersonalDetails newDetails) {
+        SQLiteDatabase database = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_NAME, newDetails.name);
+        cv.put(COLUMN_GENDER, newDetails.gender);
+        cv.put(COLUMN_AGE, newDetails.age);
+        cv.put(COLUMN_ADDRESS, newDetails.address);
+        cv.put(COLUMN_CITY, newDetails.city);
+        cv.put(COLUMN_ZIP, newDetails.zip);
+
+        return database.update(TABLE_NAME, cv, COLUMN_ID + "=?", new String[] {String.valueOf(id)}) > 0;
     }
 
     @SuppressLint("Recycle")

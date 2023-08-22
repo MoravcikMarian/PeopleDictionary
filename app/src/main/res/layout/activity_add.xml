@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:id="@+id/add_name_value"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="Empty"
+        android:hint="Name Surname"
+        android:inputType="text|textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/add_address_value"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="Empty"
+        android:hint="Address"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/add_age_value"
+        app:layout_constraintStart_toStartOf="@+id/add_age_value"
+        app:layout_constraintTop_toBottomOf="@+id/add_age_value"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/add_city_value"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="Empty"
+        android:hint="City"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/add_address_value"
+        app:layout_constraintStart_toStartOf="@+id/add_address_value"
+        app:layout_constraintTop_toBottomOf="@+id/add_address_value"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/add_zip_value"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="Empty"
+        android:hint="ZIP"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/add_city_value"
+        app:layout_constraintStart_toStartOf="@+id/add_city_value"
+        app:layout_constraintTop_toBottomOf="@+id/add_city_value"
+        tools:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/add_age_value"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="Empty"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/gender"
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/gender"
+        tools:textSize="12sp" />
+
+    <Button
+        android:id="@+id/add_btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_zip_value"
+        android:backgroundTint="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/add_btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_btn_add"
+        android:backgroundTint="@color/colorAccent"/>
+
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/add_name_value"
+        app:layout_constraintStart_toStartOf="@+id/add_name_value"
+        app:layout_constraintTop_toBottomOf="@+id/add_name_value" />
+</androidx.constraintlayout.widget.ConstraintLayout>

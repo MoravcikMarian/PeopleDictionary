@@ -10,13 +10,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Material3.Dark"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".AddActivity"
+            android:exported="false"
+            android:label="Add new person" />
+        <activity
+            android:name=".EditActivity"
+            android:exported="false"
+            android:label="Personal Details" />
+        <activity
             android:name=".DetailsActivity"
-            android:parentActivityName=".MainActivity"
+            android:exported="false"
             android:label="Personal Details"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
