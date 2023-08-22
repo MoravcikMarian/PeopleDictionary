@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        app:showAsAction="always|collapseActionView"
+        android:icon="@drawable/ic_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+    <item
+        android:id="@+id/filter"
+        android:title="Filter"
+        android:icon="@drawable/ic_filter"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/deleteAll"
+        android:title="Delete All" />
+    <item
+        android:id="@+id/generateEntries"
+        android:title="Generate Entries">
+    <menu>
+        <item
+            android:id="@+id/generate10"
+            android:title="10" />
+        <item
+            android:id="@+id/generate50"
+            android:title="50" />
+        <item
+            android:id="@+id/generate100"
+            android:title="100" />
+    </menu>
+    </item>
+</menu>
